@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(num) 
+        {
+            
+            document.getElementById("display").value += num
+        }
+        function pracket1()
+        {
+        
+            document.getElementById("display").value +="("
+        }
+        function pracket2()
+        {
+        
+            document.getElementById("display").value +=")"
+        }
+        function clr() {
+            document.getElementById("display").value=""
+            document.getElementById("display2").value=""
+        }
+        
+        function equal() {
+            // alert('Gokul');
+            let calc = document.getElementById("display").value
+            let result = eval(calc)    
+            document.getElementById("display2").value = result    
+        }
+        function clear2() 
+        {
+            // let clear_last = document.getElementById("display").textContent
+            
+            // document.getElementById("display").textContent = clear_last.slice(0,clear_last.length-1)}
+            let clear_last = document.getElementById("display").value;
+            
+            document.getElementById("display").value = clear_last.slice(0,clear_last.length-1)
+            } 
+            
+        
+            
+            </script>
+</head>
+<body>
+    
+    <h1 class="h1">Calculator</h1>
+   <div class="div1"> <table border="1" >
+        <tr >
+          <td colspan="4" class="td1"><input id="display" ><input id="display2" disabled> </td>  
+        </tr>
+           <tr> 
+                <td ><button onclick="clr()"><b>clr</b></button></td>
+                <td ><button onclick="clear2()"><b>del</b></button></td>
+                <td ><button onclick="pracket1('(')"><b>(</b></button></td>
+                <td ><button onclick="pracket2('(')"><b>)</b></button></td>
+                </tr>
+    
+               <tr>
+            <td><button onclick="display(1)"><b>1</b></button></td>
+            <td><button onclick="display(2)"><b>2</b></button></td>
+            <td><button onclick="display(3)"><b>3</b></button></td>
+            <td><button onclick="display('+')"><b>+</b></button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display(4)"><b>4</b></button></td>
+            <td><button onclick="display(5)"><b>5</b></button></td>
+            <td><button onclick="display(6)"><b>6</b></button></td>
+            <td><button onclick="display('-')"><b>-</b></button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display(7)"><b>7</b></button></td>
+            <td><button onclick="display(8)"><b>8</b></button></td>
+            <td><button onclick="display(9)"><b>9</b></button></td>
+            <td><button onclick="display('*')"><b>*</b></button></td>
+        </tr>
+              <tr>
+            <td><button onclick="display(0)"><b>0</b></button></td>
+            <td><button onclick="display('.')"><b>.</b></button></td>
+            <td><button onclick="equal()"><b>=</b></button></td>
+            <td><button onclick="display('/')"><b>/</b></button></td>
+        </tr></div>
+        
+    </table></div>
+</body>
+</html>
+ <!-- <style>
+    .td1{
+        border-radius: 30px;
+    }
+    
+    .div{
+        display:block;
+        margin-top: 25px;
+        box-shadow: inset -2px -2px -2px,
+                    inset 2px 2px 2px  ;
+        
+    }
+        h1
+    {
+        text-align: center;
+        color: rgb(0, 0, 0,0.6);
+        text-shadow: 2px 2px 2px ;
+        
+    }
+    h1:hover{
+        text-shadow: 2px 1px 1px red;
+        transition: 5s;
+        cursor: pointer;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background: url('C:\\Users\\kalidass\\Downloads\\pexels-photo-1363876.jpeg'); 
+        background-size: cover;
+
+
+        /* width: 100%; */
+        /* background-color: slategray; */
+    }
+table
+{
+    border-radius: 22px;
+    border: none;
+    outline: none;
+    width: 310px;
+    height: 445px;
+    border-spacing: 15px;
+    /* border-collapse:separate; */
+    
+     background-color: rgb(255, 255, 255,0.2); 
+     box-shadow: inset -2px -2px -2px,
+                inset 2px 2px 2px ;
+    /* justify-content: center;
+    text-align: center;*/
+    /* display: block;
+    margin: auto;  */
+    box-shadow: 10px 8px 10px 8px rgba(0, 0, 0, 0.4);
+    
+    
+    
+}
+td{
+     text-align: center; 
+   outline: none;
+   border: none;
+     padding: 5px 8px ;  
+    box-shadow: 2px 1px 2px 1px rgb(128, 128, 128 ,0.1);
+    
+}
+.td1{
+    background-color:blueviolet;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 30px;
+}
+button{
+    display: inline-block;
+    width: 100%;
+
+    padding:10px 16px ;
+   border-radius: 40%; 
+    box-shadow: inset -2px -2px -1px,inset 2px 2px 2px;
+    border: none;
+    background-color: rgb(255, 255, 255,0.3);
+}
+button:hover{
+    background-color: rgb(128, 128, 128,0.5);
+    cursor: pointer;
+}
+button:active{
+    background-color: rgb(128, 128, 128,0.5);
+    cursor: pointer;
+    box-shadow: 1px 2px rgb(128, 128, 128,0.5);
+    transform: translateY(3px);
+}  -->
+
+
+  <style>
+@media only screen and (max-width:360px) 
+{
+    #display
+    {
+        width: 80%;
+    }   
+    /* [class="div"] */
+}
+
+  *{
+      padding: 5px 5px 5px 5px;
+      outline: 0;
+     
+  }
+  #display{
+      outline: none;
+      border: none;
+      /* border-radius: 15px; */
+      background: none;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      
+      font-weight: 500;
+      color: white;
+      flex-direction: row;
+      flex-wrap: wrap;
+      
+  }
+  #display2{
+      flex-direction: row;
+      flex-wrap: wrap;
+      outline: none;
+      border: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background: none;
+      text-align: end;
+      font-weight: 500;
+      color: white;
+ 
+  }
+  
+  .h1{
+      text-align: center;
+      color:#fff;
+      text-shadow:0px 1px 0px  #CCC,
+                  0px 2px 0px  #CCC,
+                 0px 3px 0px  #CCC,
+                 0px 1px 0px  #CCC
+                
+              
+             
+        
+           ;
+
+  }
+  .h1:hover{
+
+    
+      transition: 5s;
+      text-shadow: 1px 1px 1px rgb(255, 105, 180);
+       color: gray;
+       cursor: pointer;
+  }
+  td{
+      text-align: center;
+      border: none;
+      outline: none;
+  }
+  button{
+      border: none;
+  }
+table{
+    outline: none;
+    width: 190px;
+    height: 280px;
+    display: block;
+    margin: auto;
+    
+    border: none;
+    border-radius: 20px;
+    box-shadow: 8px 4px 4px 4px rgb(0, 0, 0,.20),
+    inset -5px -5px 12px  #ffffff,
+                inset 5px 5px 12px rgb(0, 0, 0,.16);
+                
+   
+        
+                 
+}
+.td1{
+    box-shadow: 2px 1px 2px 1px rgb(0, 0, 0,0.20),
+                inset -5px -5px 12px  rgb(255, 255, 255,0.4),
+                inset 5px 5px 12px rgb(0, 0, 0,.16);
+                border-radius: 20px;
+                font-size: 20px;
+                font-weight:900;
+                text-align: end;
+                display: inline-flexbox;
+                width: 250px;
+                flex-wrap: wrap;
+            
+                
+                
+    
+
+}
+button{
+    box-shadow: 5px 6px 5px 6px rgb(0, 0, 0,0.20),
+                inset -7px -8px 14px  #ffffff,
+                inset 7px 8px 14px rgb(0, 0, 0,.16);
+                
+                border-radius: 50%;
+    
+} 
+button:hover{
+    color:rgb(0, 0, 0,.5);
+    cursor: pointer;
+}
+button:active{
+    transform: translateY(3px);
+}
+body{
+    background: url('img.jpeg');
+    
+      background-size: cover;
+      background-repeat: no-repeat;
+     
+}
+
+/* @media screen (max-width){
+    
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
